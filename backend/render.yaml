@@ -1,0 +1,15 @@
+# backend/render.yaml
+services:
+  - type: web
+    name: youtube-agent-api
+    runtime: python
+    repo: https://github.com/yourusername/your-repo
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.11.0
