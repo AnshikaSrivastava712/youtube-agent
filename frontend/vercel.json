@@ -1,9 +1,14 @@
-{
-  "version": 2,
+echo '{
+  "builds": [
+    {
+      "src": "dist/**",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/dist/$1"
     }
   ]
-}
+}' > vercel.json
