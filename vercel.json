@@ -1,4 +1,4 @@
-# In the root directory (youtube_agent/)
+# Create a fresh vercel.json
 echo '{
   "version": 2,
   "builds": [
